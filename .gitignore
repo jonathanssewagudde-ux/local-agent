@@ -10,3 +10,6 @@ raw/
 .satoru/spawn-queue.json
 .logs/
 .satoru/hook-errors.log
+.satoru/plan-draft.json
+.satoru/launcher-pids.json
+.satoru/*.pid

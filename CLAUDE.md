@@ -30,10 +30,12 @@ We are building "Mission Control": a local, browser-based visual office for my C
 ## How nova runs the team
 nova (the lead) is the main Claude session. The other members are subagents in `.claude/agents/`.
 
-- **Plan first:** for any real task, write `.satoru/projects/<slug>/plan.json` (status `"awaiting-approval"`, tasks each with an owner from the card and the files they will touch), then STOP until I approve it in the dashboard. Shape:
-  `{"status":"awaiting-approval","title":"...","scope":"...","risks":["..."],"tasks":[{"id":"T1","title":"...","owner":"<member>","files":["..."],"status":"planned"}]}`
-  The project slug is `activeProject` in `.satoru/config.json`.
-- After approval, delegate each task to its owner with the Agent tool; independent tasks run in parallel. When I approve, the dashboard copies the plan's tasks into `.satoru/projects/<slug>/tasks.json` (`{"tasks":[{id,title,owner,files,status,verified,updatedAt}]}`). Keep each task's `status` there up to date (`planned` / `in-progress` / `review` / `blocked` / `done`) and set `verified: true` once it has been checked. Write it atomically (temp file + rename) and respect the `<file>.lock` convention.
+- **Plan first:** for any real task, write a plan draft (e.g. `.satoru/plan-draft.json`) with the Write tool, then publish it with
+  `node scripts/board.mjs plan .satoru/plan-draft.json` — it validates owners against the card, refuses file conflicts and writes `.satoru/projects/<slug>/plan.json` safely with status `"awaiting-approval"`. Then STOP until I approve it in the dashboard. Draft shape:
+  `{"title":"...","scope":"...","risks":["..."],"tasks":[{"id":"T1","title":"...","owner":"<member>","files":["..."]}]}`
+  The active project is `activeProject` in `.satoru/config.json` (board.mjs uses it automatically).
+- After approval, delegate each task to its owner with the Agent tool; independent tasks run in parallel. When I approve, the dashboard copies the plan's tasks into `tasks.json`. Keep each task's status up to date with
+  `node scripts/board.mjs task <id> <planned|in-progress|review|blocked|done> [verified]` — add `verified` once it has really been checked. Never hand-edit tasks.json or plan.json (board.mjs takes the lock and writes atomically).
 - **Stage directives** — when the team moves, write a line on its own like:
   🎬 <name> → <room key> · "<a short, real sentence about what they are doing>"
   Room keys: briefing, meeting, approval, workspace, command, server, pantry, lounge, done. Real work only — never invent activity.

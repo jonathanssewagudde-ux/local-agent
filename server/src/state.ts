@@ -82,7 +82,7 @@ export async function timeline(opts: { before?: string; limit?: number; project?
     (!opts.project || (opts.project === "unattributed" ? !e.project : e.project === opts.project)) &&
     (!opts.member || (opts.member === "unattributed" ? !e.agent : e.agent === opts.member)) &&
     (!opts.type || (opts.type === "unattributed" ? !e.agent || !e.project : e.type === opts.type));
-  const filtered = all.filter((e) => (!before || cmp(before, e) > 0) && match(e));
+  const filtered = all.filter((e) => (!before || cmp(before, e) < 0) && match(e)); // strictly after the cursor in newest-first order
   const page = filtered.slice(0, limit);
   return { events: page, next: filtered.length > limit ? page[page.length - 1].cursor : null };
 }

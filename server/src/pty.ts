@@ -20,7 +20,9 @@ function shell(): { file: string; args: string[] } {
 function spawn(sid: string, cols: number, rows: number): Session {
   const { file, args } = shell();
   const env = { ...process.env, MISSION_CONTROL: "1" } as Record<string, string>;
-  delete env.CLAUDECODE; // never make the inner claude think it is nested
+  // a fresh, top-level shell: never let the inner claude think it is nested (that would also turn off transcript saving)
+  delete env.CLAUDECODE;
+  delete env.CLAUDE_CODE_CHILD_SESSION;
   const term = pty.spawn(file, args, { name: "xterm-256color", cols, rows, cwd: ROOT, env });
   const s: Session = { sid, term, scrollback: "", sockets: new Set(), lastUsed: Date.now(), exited: false };
   term.onData((d) => {

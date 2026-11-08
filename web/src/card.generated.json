@@ -54,5 +54,7 @@
     "server": "Server Room",
     "pantry": "Pantry",
     "lounge": "Lounge"
-  }
+  },
+  "artStyle": "chibi pixel art — crisp 1-pixel dark outline, 2–3 shading tones per colour, limited palette, no gradients, no blur, soft light from the top-left",
+  "pixelArt": true
 }

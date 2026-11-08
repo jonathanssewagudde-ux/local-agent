@@ -10,15 +10,15 @@ export default defineConfig({
     strictPort: true,
     host: "localhost",
     proxy: {
-      "/api": { target: "http://localhost:4317", changeOrigin: false },
-      "/pty": { target: "ws://localhost:4317", ws: true },
+      "/api": { target: "http://127.0.0.1:4317", changeOrigin: false },
+      "/pty": { target: "ws://127.0.0.1:4317", ws: true },
     },
   },
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        picker: resolve(__dirname, "picker.html"),
+        main: resolve(import.meta.dirname, "index.html"),
+        picker: resolve(import.meta.dirname, "picker.html"),
       },
     },
   },

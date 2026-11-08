@@ -1,0 +1,459 @@
+{
+  "image": {
+    "width": 1448,
+    "height": 1086
+  },
+  "rooms": {
+    "briefing": {
+      "x": 1.7,
+      "y": 2.2,
+      "w": 31.5,
+      "h": 25.4
+    },
+    "meeting": {
+      "x": 33.1,
+      "y": 2.2,
+      "w": 33.1,
+      "h": 25.4
+    },
+    "approval": {
+      "x": 66.3,
+      "y": 2.2,
+      "w": 32,
+      "h": 25.4
+    },
+    "workspace": {
+      "x": 1.7,
+      "y": 34.1,
+      "w": 42.5,
+      "h": 32.2
+    },
+    "command": {
+      "x": 49.7,
+      "y": 34.1,
+      "w": 48.6,
+      "h": 32.2
+    },
+    "lounge": {
+      "x": 1.7,
+      "y": 72.7,
+      "w": 28.7,
+      "h": 25
+    },
+    "pantry": {
+      "x": 30.4,
+      "y": 72.7,
+      "w": 38.7,
+      "h": 25
+    },
+    "server": {
+      "x": 69.1,
+      "y": 66.3,
+      "w": 29.3,
+      "h": 31.5
+    }
+  },
+  "seats": [
+    {
+      "id": "s1",
+      "room": "briefing",
+      "x": 7.9,
+      "y": 16.6
+    },
+    {
+      "id": "s2",
+      "room": "briefing",
+      "x": 14.2,
+      "y": 16.6
+    },
+    {
+      "id": "s3",
+      "room": "briefing",
+      "x": 20.6,
+      "y": 16.6
+    },
+    {
+      "id": "s4",
+      "room": "briefing",
+      "x": 26.9,
+      "y": 16.6
+    },
+    {
+      "id": "s5",
+      "room": "briefing",
+      "x": 7.9,
+      "y": 24.9
+    },
+    {
+      "id": "s6",
+      "room": "briefing",
+      "x": 14.2,
+      "y": 24.9
+    },
+    {
+      "id": "s7",
+      "room": "briefing",
+      "x": 20.6,
+      "y": 24.9
+    },
+    {
+      "id": "s8",
+      "room": "briefing",
+      "x": 26.9,
+      "y": 24.9
+    },
+    {
+      "id": "s9",
+      "room": "meeting",
+      "x": 43.5,
+      "y": 25.2
+    },
+    {
+      "id": "s10",
+      "room": "meeting",
+      "x": 47.7,
+      "y": 25.2
+    },
+    {
+      "id": "s11",
+      "room": "meeting",
+      "x": 51.8,
+      "y": 25.2
+    },
+    {
+      "id": "s12",
+      "room": "meeting",
+      "x": 55.9,
+      "y": 25.2
+    },
+    {
+      "id": "s13",
+      "room": "meeting",
+      "x": 43.5,
+      "y": 7.7
+    },
+    {
+      "id": "s14",
+      "room": "meeting",
+      "x": 47.7,
+      "y": 7.7
+    },
+    {
+      "id": "s15",
+      "room": "meeting",
+      "x": 51.8,
+      "y": 7.7
+    },
+    {
+      "id": "s16",
+      "room": "meeting",
+      "x": 55.9,
+      "y": 7.7
+    },
+    {
+      "id": "s17",
+      "room": "approval",
+      "x": 79.2,
+      "y": 21.5
+    },
+    {
+      "id": "s18",
+      "room": "approval",
+      "x": 85.4,
+      "y": 21.5
+    },
+    {
+      "id": "s19",
+      "room": "approval",
+      "x": 92,
+      "y": 20.6
+    },
+    {
+      "id": "s20",
+      "room": "workspace",
+      "x": 15.6,
+      "y": 48,
+      "work": true
+    },
+    {
+      "id": "s21",
+      "room": "workspace",
+      "x": 32.4,
+      "y": 48,
+      "work": true
+    },
+    {
+      "id": "s22",
+      "room": "workspace",
+      "x": 15.6,
+      "y": 58.6,
+      "work": true
+    },
+    {
+      "id": "s23",
+      "room": "workspace",
+      "x": 32.4,
+      "y": 58.6,
+      "work": true
+    },
+    {
+      "id": "s24",
+      "room": "command",
+      "x": 64.6,
+      "y": 55.4,
+      "work": true
+    },
+    {
+      "id": "s25",
+      "room": "command",
+      "x": 83.4,
+      "y": 55.4,
+      "work": true
+    },
+    {
+      "id": "s26",
+      "room": "command",
+      "x": 60.8,
+      "y": 59.9
+    },
+    {
+      "id": "s27",
+      "room": "command",
+      "x": 70.4,
+      "y": 59.9
+    },
+    {
+      "id": "s28",
+      "room": "command",
+      "x": 80.1,
+      "y": 59.9
+    },
+    {
+      "id": "s29",
+      "room": "lounge",
+      "x": 9.8,
+      "y": 81.6
+    },
+    {
+      "id": "s30",
+      "room": "lounge",
+      "x": 15.3,
+      "y": 81.6
+    },
+    {
+      "id": "s31",
+      "room": "lounge",
+      "x": 20.9,
+      "y": 81.6
+    },
+    {
+      "id": "s32",
+      "room": "lounge",
+      "x": 7.7,
+      "y": 92.6
+    },
+    {
+      "id": "s33",
+      "room": "lounge",
+      "x": 22.9,
+      "y": 92.6
+    },
+    {
+      "id": "s34",
+      "room": "pantry",
+      "x": 46.3,
+      "y": 88
+    },
+    {
+      "id": "s35",
+      "room": "pantry",
+      "x": 55.9,
+      "y": 88
+    },
+    {
+      "id": "s36",
+      "room": "pantry",
+      "x": 51.1,
+      "y": 93.6
+    },
+    {
+      "id": "s37",
+      "room": "pantry",
+      "x": 60.8,
+      "y": 86.6
+    },
+    {
+      "id": "s38",
+      "room": "pantry",
+      "x": 38.7,
+      "y": 82
+    },
+    {
+      "id": "s39",
+      "room": "server",
+      "x": 83.7,
+      "y": 95.2,
+      "work": true
+    },
+    {
+      "id": "s40",
+      "room": "server",
+      "x": 94.2,
+      "y": 87.5
+    }
+  ],
+  "doors": [
+    {
+      "id": "d_briefing",
+      "room": "briefing",
+      "x": 17.3,
+      "y": 27.6
+    },
+    {
+      "id": "d_meeting",
+      "room": "meeting",
+      "x": 47,
+      "y": 27.6
+    },
+    {
+      "id": "d_approval",
+      "room": "approval",
+      "x": 82.2,
+      "y": 27.6
+    },
+    {
+      "id": "d_workspace",
+      "room": "workspace",
+      "x": 44.2,
+      "y": 50.2
+    },
+    {
+      "id": "d_command",
+      "room": "command",
+      "x": 49.7,
+      "y": 50.2
+    },
+    {
+      "id": "d_pantry",
+      "room": "pantry",
+      "x": 41.4,
+      "y": 72.7
+    },
+    {
+      "id": "d_lounge",
+      "room": "lounge",
+      "x": 30.4,
+      "y": 85.6
+    },
+    {
+      "id": "d_server",
+      "room": "server",
+      "x": 83.6,
+      "y": 66.3
+    }
+  ],
+  "nodes": [
+    {
+      "id": "j_top_left",
+      "x": 17.3,
+      "y": 30.8
+    },
+    {
+      "id": "j_top_mid",
+      "x": 47,
+      "y": 30.8
+    },
+    {
+      "id": "j_top_right",
+      "x": 82.2,
+      "y": 30.8
+    },
+    {
+      "id": "j_mid",
+      "x": 47,
+      "y": 50.2
+    },
+    {
+      "id": "j_bottom",
+      "x": 47,
+      "y": 69.5
+    },
+    {
+      "id": "j_bottom_pantry",
+      "x": 41.4,
+      "y": 69.5
+    },
+    {
+      "id": "n_pantry",
+      "x": 41.4,
+      "y": 85.6
+    },
+    {
+      "id": "n_command",
+      "x": 83.6,
+      "y": 58.9
+    }
+  ],
+  "edges": [
+    [
+      "d_briefing",
+      "j_top_left"
+    ],
+    [
+      "j_top_left",
+      "j_top_mid"
+    ],
+    [
+      "d_meeting",
+      "j_top_mid"
+    ],
+    [
+      "j_top_mid",
+      "j_top_right"
+    ],
+    [
+      "j_top_right",
+      "d_approval"
+    ],
+    [
+      "j_top_mid",
+      "j_mid"
+    ],
+    [
+      "j_mid",
+      "d_workspace"
+    ],
+    [
+      "j_mid",
+      "d_command"
+    ],
+    [
+      "j_mid",
+      "j_bottom"
+    ],
+    [
+      "j_bottom",
+      "j_bottom_pantry"
+    ],
+    [
+      "j_bottom_pantry",
+      "d_pantry"
+    ],
+    [
+      "d_pantry",
+      "n_pantry"
+    ],
+    [
+      "n_pantry",
+      "d_lounge"
+    ],
+    [
+      "d_command",
+      "n_command"
+    ],
+    [
+      "n_command",
+      "d_server"
+    ]
+  ]
+}

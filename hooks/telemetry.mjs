@@ -238,7 +238,12 @@ async function run(type, p, userLevel) {
   } else {
     agent = lead; // main-session events belong to the lead
   }
-  if (type === "prompt") payload.prompt = short(p.prompt, 300);
+  // Claude Code reports background-agent completions as a <task-notification> "prompt" — that is not the user talking.
+  const notification = type === "prompt" && /^\s*<task-notification>/.test(String(p.prompt || ""));
+  if (type === "prompt") {
+    if (notification) { payload.system = true; payload.prompt = short((String(p.prompt).match(/<summary>([\s\S]*?)<\/summary>/) || [])[1] || "background task finished", 200); }
+    else payload.prompt = short(p.prompt, 300);
+  }
   if (type === "file_touch") { payload.tool = p.tool_name; payload.file = touched ? String(touched) : undefined; }
   if (type === "command") { payload.command = short(p.tool_input?.command, 200); payload.description = short(p.tool_input?.description || "", 120) || undefined; }
   if (type === "session_start") payload.source = p.source;
@@ -282,7 +287,7 @@ async function run(type, p, userLevel) {
       a.heartbeat = now;
     });
   }
-  if (project && type === "prompt") {
+  if (project && type === "prompt" && !notification) {
     await lockedUpdate(pfile(project, "agents.json"), AGENTS_FALLBACK, (b) => {
       const a = (b.agents ||= {})[lead] ||= {};
       Object.assign(a, { state: "working", task: short(p.prompt, 80), say: null, since: now, heartbeat: now });

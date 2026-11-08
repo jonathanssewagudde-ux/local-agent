@@ -3,7 +3,7 @@ import cardJson from "./card.generated.json";
 export type RoomKey = "briefing" | "meeting" | "approval" | "workspace" | "command" | "server" | "pantry" | "lounge";
 export const ROOM_KEYS: RoomKey[] = ["briefing", "meeting", "approval", "workspace", "command", "server", "pantry", "lounge"];
 export type Member = { name: string; role: string; worksIn: "command" | "workspace" | "server"; character: string; details?: string };
-export type Card = { appName: string; uiAccent: string; team: Member[]; rooms: Record<RoomKey, string> };
+export type Card = { appName: string; uiAccent: string; team: Member[]; rooms: Record<RoomKey, string>; artStyle: string; pixelArt: boolean };
 
 export const card = cardJson as Card;
 export const lead = card.team[0];

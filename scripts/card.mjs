@@ -68,7 +68,10 @@ export function parseCard(text) {
     e.cardErrors = errors;
     throw e;
   }
-  return { appName, uiAccent: hex.toLowerCase(), team, rooms };
+  const artStyle = field("ART_STYLE");
+  // pixel art → nearest-neighbour scaling and image-rendering: pixelated
+  const pixelArt = /pixel/i.test(artStyle) && !/not pixel art/i.test(artStyle);
+  return { appName, uiAccent: hex.toLowerCase(), team, rooms, artStyle, pixelArt };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
