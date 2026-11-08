@@ -1,0 +1,58 @@
+{
+  "appName": "Mission Control",
+  "uiAccent": "#8b5cf6",
+  "team": [
+    {
+      "name": "nova",
+      "role": "lead",
+      "worksIn": "command",
+      "character": "a calm, confident hacker leader with silver spiky hair"
+    },
+    {
+      "name": "pip",
+      "role": "product",
+      "worksIn": "command",
+      "character": "a cheerful product manager with a pink bob haircut"
+    },
+    {
+      "name": "rook",
+      "role": "architect",
+      "worksIn": "workspace",
+      "character": "a quiet, thoughtful architect in a navy turtleneck"
+    },
+    {
+      "name": "grim",
+      "role": "backend",
+      "worksIn": "server",
+      "character": "a laid-back backend engineer in a green hoodie with a big headset"
+    },
+    {
+      "name": "lumi",
+      "role": "frontend",
+      "worksIn": "workspace",
+      "character": "an energetic designer-coder with yellow twin-tails"
+    },
+    {
+      "name": "bug",
+      "role": "qa",
+      "worksIn": "workspace",
+      "character": "a sharp-eyed bug hunter in a white lab coat"
+    },
+    {
+      "name": "quill",
+      "role": "docs",
+      "worksIn": "workspace",
+      "character": "a gentle writer with long lavender hair and a notebook"
+    }
+  ],
+  "rooms": {
+    "briefing": "Briefing Room",
+    "meeting": "Meeting Room",
+    "approval": "Approval Office",
+    "workspace": "Workspace",
+    "command": "Command Center",
+    "server": "Server Room",
+    "pantry": "Pantry",
+    "lounge": "Lounge"
+  }
+}

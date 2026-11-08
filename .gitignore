@@ -1,0 +1,12 @@
+node_modules/
+dist/
+raw/
+.satoru/events/*.ndjson
+.satoru/projects/*/agents.json
+.satoru/projects/*/approvals.json
+*.lock
+*.tmp-*
+.satoru/session-map.json
+.satoru/spawn-queue.json
+.logs/
+.satoru/hook-errors.log
